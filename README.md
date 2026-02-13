@@ -1,16 +1,30 @@
 # ASCOOS OS – TCurrencyHandler  
 A complete, modular currency management handler for the ASCOOS Web Operating System.
 
+The class is part of the collection of about 1,500 classes that make up the **ASCOOS OS**.
+
 ![Ascoos](https://dl.ascoos.com/images/ascoos.png)
+
+---
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [DoBu Documentation](#dobu-documentation)
+- [Usage Example](#usage-example)
+- [Architecture Notes](#architecture-notes)
+- [License](#license)
+- [Author](#author)
 
 ---
 
 ## Overview
 
-`TCurrencyHandler` is the first publicly released class of **ASCOOS OS** with open source, designed to demonstrate:
+`TCurrencyHandler` is the first publicly released class (with open source) of **ASCOOS OS**, designed to demonstrate:
 
 - the architecture and coding style of the ASCOOS Kernel  
-- the modular loading system (Extras Classes Manager)  
+- the optional classes dynamic loading system (Extras Classes Manager) 
 - the DoBu documentation technology  
 - and a fully functional, production‑ready currency management module  
 
@@ -38,29 +52,24 @@ This class provides:
 - ✔ Validation  
 - ✔ UTF‑8 safe  
 - ✔ Fully documented with DoBu  
-- ✔ Modular loading via Extras Manager  
+- ✔ Optional loading via Extras Manager 
 
 ---
 
 ## Installation
 
-This class is part of the ASCOOS OS Extras system.
 
-It resides physically under:
+This class is part of the ASCOOS OS **Extras Kernel Classes** system and does not require installation as it already exists in the kernel.
 
-```
-/extras/science/financials/
-```
+### Namespace
 
-But logically under the namespace:
-
-```
-ASCOOS\OS\Kernel\Science\Financials
+```php
+use ASCOOS\OS\Kernel\Science\Financials\TCurrencyHandler;
 ```
 
----
+### Management
 
-It is loaded dynamically by the **Extras Classes Manager**, depending on user configuration.
+It is loaded dynamically by the internal app **Extras Classes Manager**, depending on user configuration.
 
 ![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/ecm-01.png)
 
@@ -70,6 +79,7 @@ It is loaded dynamically by the **Extras Classes Manager**, depending on user co
 
 This repository includes full DoBu docblocks for:
 
+- the file with the class and the example file
 - the class  
 - each method  
 - parameters  
@@ -77,7 +87,36 @@ This repository includes full DoBu docblocks for:
 - exceptions  
 - multilingual descriptions  
 
-DoBu is the official documentation DSL of ASCOOS OS.
+**[DoBu](https://github.com/ascoos/dobu)** is the official documentation DSL of **[ASCOOS OS](https://github.com/ascoos/os)**.
+
+### DoBu documentation in the example file
+
+```php
+/*
+dobu {
+    file:id(`expl15435`) {
+        ascoos {
+            name {`ASCOOS OS`},
+            version {`1.0.0`},
+        },
+        example {
+            class {`TCurrencyHandler`}
+            source {`example.php`},
+            category:langs {
+                en {`Financials`},
+                el {`Οικονομικά στοιχεία`}
+            },
+            description:langs {
+                en {`A complete example of currency management: symbols, names, formatting, validation.`},
+                el {`Ένα πλήρες παράδειγμα διαχείρισης νομισμάτων: σύμβολα, ονομασίες, μορφοποίηση, επικύρωση.`}
+            },
+            author {`Drogidis Christos`},
+            sincePHP {`8.4.0`}
+        }
+    }
+}
+*/
+```
 
 ---
 
@@ -106,7 +145,7 @@ echo $currency->format(1234.56, 'EUR'); // 1.234,56 €
 
 ---
 
-See the full example: [example.php](./example.php) which produces the following result
+See the full example: [example.php](https://github.com/ascoos/tcurrencyhandler/blob/main/example.php) which produces the following result
 
 ![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/example.png)
 
@@ -114,7 +153,7 @@ See the full example: [example.php](./example.php) which produces the following 
 
 ## Architecture Notes
 
-ASCOOS OS uses a **Modular Kernel Architecture**:
+ASCOOS OS uses a **Full Modular Kernel Architecture**:
 
 - Some classes are **Deep Core Kernel** (always loaded)
 - Others are **Extras** (optional, dynamically loaded)
