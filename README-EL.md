@@ -70,7 +70,7 @@ use ASCOOS\OS\Kernel\Science\Financials\TCurrencyHandler;
 
 Η φόρτωση γίνεται δυναμικά μέσω της εσωτερικής εφαρμογής **Extras Classes Manager**.
 
-![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/ecm-01.png)
+![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/ecm-01-1024.webp)
 
 ---
 
@@ -146,7 +146,7 @@ echo $currency->format(1234.56, 'EUR'); // 1.234,56 €
 
 Δείτε το πλήρες παράδειγμα: [example.php](https://github.com/ascoos/tcurrencyhandler/blob/main/example.php) που παράγει το ακόλουθο αποτέλεσμα
 
-![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/example.png)
+![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/example.webp)
 
 ---
 

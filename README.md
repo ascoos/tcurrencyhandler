@@ -71,7 +71,7 @@ use ASCOOS\OS\Kernel\Science\Financials\TCurrencyHandler;
 
 It is loaded dynamically by the internal app **Extras Classes Manager**, depending on user configuration.
 
-![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/ecm-01.png)
+![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/ecm-01-1024.webp)
 
 ---
 
@@ -147,7 +147,7 @@ echo $currency->format(1234.56, 'EUR'); // 1.234,56 €
 
 See the full example: [example.php](https://github.com/ascoos/tcurrencyhandler/blob/main/example.php) which produces the following result
 
-![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/example.png)
+![ASCOOS OS](https://s.ascoos.com/images/ascoos/tchc/example.webp)
 
 ---
 
